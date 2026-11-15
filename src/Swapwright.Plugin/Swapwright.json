@@ -1,0 +1,10 @@
+{
+  "Author": "SloppyMods",
+  "Name": "Swapwright",
+  "Punchline": "Put a dance mod on any unlocked emote, test it, install it",
+  "Description": "Pick a Penumbra dance mod and one of your unlocked emotes, press Test to build and load the swap as a temporary mod, then Install it as a new mod folder. Needs the swapd service (systemctl --user start swapd).",
+  "InternalName": "Swapwright",
+  "ApplicableVersion": "any",
+  "Tags": ["penumbra", "emote", "dance", "swap"],
+  "CategoryTags": ["utility"]
+}

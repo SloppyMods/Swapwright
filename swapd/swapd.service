@@ -1,0 +1,17 @@
+# systemd --user unit for swapd. Not installed. To use:
+#   cp swapd.service ~/.config/systemd/user/ && systemctl --user daemon-reload && systemctl --user enable --now swapd
+[Unit]
+Description=Swapwright swapd (local emote-swap build service, 127.0.0.1:47815)
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/you/Projects/ffxiv-tools/Swapwright/swapd/swapd.py
+WorkingDirectory=/home/you/Projects/ffxiv-tools/Swapwright/swapd
+Environment=SWAPD_PORT=47815
+Environment=SWAPD_TMP_ROOT=/tmp/claude-1000
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
